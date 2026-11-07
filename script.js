@@ -25,6 +25,7 @@ function filterBySeason() {
 }
 
 const packBoxes = document.querySelectorAll(".pack-list input[type='checkbox']");
+const packCountDisplay = document.querySelector(".pack-count");
 packBoxes.forEach((box) => box.addEventListener("change", updatePackCount));
 
 function updatePackCount() {
@@ -33,7 +34,7 @@ function updatePackCount() {
     box.closest("li").classList.toggle("packed", box.checked);
     if (box.checked) packed++;
   });
-  document.querySelector(".pack-count").textContent = `${packed} of ${packBoxes.length} packed`;
+  packCountDisplay.textContent = `${packed} of ${packBoxes.length} packed`;
 }
 
 const trekDaysInput = document.querySelector(".trek-days");

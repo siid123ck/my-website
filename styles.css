@@ -72,6 +72,7 @@ a {
 .hero h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: var(--space-md);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero > p {
@@ -232,6 +233,11 @@ main {
   color: var(--color-text);
   width: 100%;
   max-width: 20rem;
+}
+
+.tool select option {
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 .route-list,
