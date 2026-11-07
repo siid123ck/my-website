@@ -7,6 +7,11 @@
   --color-border: rgba(242, 245, 247, 0.2);
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Open Sans", sans-serif;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 3rem;
+  --radius: 8px;
 }
 
 *,
@@ -15,9 +20,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
+  font-size: 1rem;
   color: var(--color-text);
   background: var(--color-background);
   line-height: 1.6;
@@ -29,6 +39,20 @@ h3 {
   font-family: var(--font-heading);
   font-weight: 800;
   line-height: 1.25;
+  margin: 0 0 var(--space-md);
+}
+
+p {
+  margin: 0 0 var(--space-md);
+}
+
+a {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -38,7 +62,7 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3rem 1.5rem;
+  padding: var(--space-xl) var(--space-lg);
   background:
     linear-gradient(rgba(11, 30, 45, 0.6), rgba(11, 30, 45, 0.9)),
     url("images/hero.jpg") center / cover no-repeat,
@@ -47,38 +71,67 @@ h3 {
 
 .hero h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  margin: 0 0 1rem;
+  margin-bottom: var(--space-md);
 }
 
-.hero p {
+.hero > p {
   max-width: 40rem;
   font-size: 1.1rem;
+  margin-bottom: var(--space-lg);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm) var(--space-lg);
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: var(--space-xl) var(--space-lg);
 }
 
 .intro {
   max-width: 48rem;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto var(--space-xl);
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .trek-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: var(--space-lg);
 }
 
 .trek-card {
+  display: flex;
+  flex-direction: column;
   background: var(--color-brand);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: var(--radius);
+  padding: var(--space-lg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -88,17 +141,19 @@ main {
 }
 
 .trek-card h3 {
-  margin: 0 0 0.5rem;
   color: var(--color-text);
+  font-size: 1.2rem;
 }
 
 .card-summary {
-  margin: 0 0 1rem;
+  flex-grow: 1;
+  margin-bottom: var(--space-md);
 }
 
 .card-details {
   display: none;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
+  font-size: 0.95rem;
 }
 
 .trek-card.open .card-details {
@@ -109,52 +164,68 @@ main {
 .back-to-top {
   font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 0.95rem;
   color: var(--color-background);
   background: var(--color-accent);
   border: none;
   border-radius: 6px;
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.25rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card-btn:hover,
+.card-btn:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 .back-to-top:hover {
   background: var(--color-accent-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.card-btn:active,
+.back-to-top:active {
+  transform: translateY(0);
 }
 
 .planning-tools {
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
   border-top: 1px solid var(--color-border);
 }
 
 .planning-tools h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: var(--space-xl);
 }
 
 .tool {
   background: var(--color-brand);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .tool h3 {
-  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--color-text);
 }
 
 .tool label {
   display: block;
-  margin: 0.75rem 0 0.35rem;
+  margin: var(--space-md) 0 var(--space-sm);
+  font-weight: 600;
 }
 
 .tool select,
 .tool input[type="number"] {
   font: inherit;
-  padding: 0.5rem;
+  padding: var(--space-sm);
   border-radius: 6px;
   border: 1px solid var(--color-border);
   background: var(--color-background);
@@ -167,18 +238,18 @@ main {
 .pack-list {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: var(--space-md) 0 0;
 }
 
 .route-item,
 .pack-list li {
-  padding: 0.5rem 0;
+  padding: var(--space-sm) 0;
   border-bottom: 1px solid var(--color-border);
   transition: opacity 0.2s ease;
 }
 
 .route-item.faded {
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
 .pack-list label {
@@ -186,33 +257,40 @@ main {
   align-items: center;
   gap: 0.6rem;
   margin: 0;
+  font-weight: 400;
   cursor: pointer;
+}
+
+.pack-list input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--color-accent);
 }
 
 .pack-list li.packed {
   text-decoration: line-through;
-  opacity: 0.6;
+  opacity: 0.65;
 }
 
 .pack-count,
 .budget-total {
   font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 1.1rem;
   color: var(--color-accent);
-  margin: 1rem 0 0;
+  margin: var(--space-md) 0 0;
 }
 
 .note {
   font-size: 0.9rem;
-  margin: 0.75rem 0 0;
-  opacity: 0.8;
+  margin: var(--space-sm) 0 0;
 }
 
 footer {
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: var(--space-xl) var(--space-lg);
   border-top: 1px solid var(--color-border);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 footer p {
@@ -221,11 +299,11 @@ footer p {
 
 .back-to-top {
   position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease, transform 0.2s ease;
 }
 
 .back-to-top.visible {
@@ -242,5 +320,31 @@ footer p {
 @media (min-width: 1024px) {
   .trek-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .hero {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  main {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .tool {
+    padding: var(--space-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
   }
 }
