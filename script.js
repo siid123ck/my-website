@@ -36,19 +36,19 @@ function updatePackCount() {
   document.querySelector(".pack-count").textContent = `${packed} of ${packBoxes.length} packed`;
 }
 
-const trekDays = document.querySelector(".trek-days");
-const comfortLevel = document.querySelector(".comfort-level");
-const dailyRates = { budget: 30, mid: 50, comfortable: 80 };
+const trekDaysInput = document.querySelector(".trek-days");
+const comfortLevelSelect = document.querySelector(".comfort-level");
+const budgetTotalDisplay = document.querySelector(".budget-total");
+const dailyRateByComfortLevel = { budget: 30, mid: 50, comfortable: 80 };
 
-[trekDays, comfortLevel].forEach((field) => {
-  field.addEventListener("input", calculateBudget);
-  field.addEventListener("change", calculateBudget);
-});
+trekDaysInput.addEventListener("input", calculateBudget);
+comfortLevelSelect.addEventListener("change", calculateBudget);
 
+// Multiplies the trekking days by the daily rate for the chosen comfort level and shows the estimated total.
 function calculateBudget() {
-  const days = Math.max(0, Number(trekDays.value) || 0);
-  const total = days * dailyRates[comfortLevel.value];
-  document.querySelector(".budget-total").textContent = `Estimated total: $${total} USD`;
+  const numberOfDays = Math.max(0, Number(trekDaysInput.value) || 0);
+  const estimatedTotal = numberOfDays * dailyRateByComfortLevel[comfortLevelSelect.value];
+  budgetTotalDisplay.textContent = `Estimated total: $${estimatedTotal} USD`;
 }
 
 const backToTop = document.querySelector(".back-to-top");
