@@ -39,7 +39,7 @@ All eight topics appear as cards in a grid that expands on click.
 
 **Layout Approach:** Full-width hero banner with a mountain photo and dark overlay, a short intro, then a responsive grid of eight trekking cards (1 column on phones, 2 on tablets, 4 on laptops), and a footer with a "before you go" reminder and photo credits.
 
-**Images & Graphics Style:** Wide, high-contrast mountain photos from royalty-free sources (Unsplash, Pexels, or Wikimedia Commons), downloaded into the `images/` folder. Hero uses a 16:9 crop and cards use 4:3, with a dark gradient over photos for readable white text.
+**Images & Graphics Style:** Wide, high-contrast mountain photos from royalty-free Unsplash sources, loaded by URL (no files uploaded). The logo is an inline SVG mountain mark. Hero uses a 16:9 crop and cards use 4:3, with a dark gradient over photos for readable white text.
 
 **Button & UI Style:** Solid amber, rounded corners, dark text, darkens slightly on hover. Card buttons read "Read more" and change to "Close" when expanded. Cards have a dark green background, a thin light border, and a gentle lift on hover.
 

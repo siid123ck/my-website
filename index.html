@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical guide to trekking in Nepal: choosing a route, permits, seasons, safety, packing, teahouses, and budgeting.">
   <title>Nepal Trekking Starter Guide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,177 +11,284 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body id="top">
 
-  <header class="hero" id="hero">
-    <h1 id="hero-title">Nepal Trekking Starter Guide</h1>
-    <p>Everything you need to plan your first trek in the Himalayas, from choosing a route to packing your bag.</p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <nav class="site-nav" id="site-nav" aria-label="Page sections">
-      <ul>
-        <li><a href="#trek-grid">Trekking Topics</a></li>
-        <li><a href="#planning">Plan Your Trek</a></li>
-        <li><a href="#site-footer">Before You Go</a></li>
-      </ul>
-    </nav>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Nepal Trekking Guide, back to top">
+        <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <path d="M2 40 L17 14 L25 27 L31 18 L46 40 Z" fill="#F2A541"/>
+          <path d="M17 14 L21 21 L18 20 L15 22 Z" fill="#F2F5F7"/>
+          <path d="M31 18 L34 23 L31 22 L29 23 Z" fill="#F2F5F7"/>
+        </svg>
+        <span class="logo-text">Nepal<span class="logo-accent">Trek</span> Guide</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#trek-grid">Trekking Topics</a></li>
+          <li><a href="#planning">Plan Your Trek</a></li>
+          <li><a href="#site-footer">Before You Go</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <section class="hero" id="hero">
+    <img class="hero-image" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=2000&q=80&auto=format&fit=crop" alt="Ama Dablam peak rising above the snowy ridges of the Nepal Himalaya" fetchpriority="high">
+    <div class="hero-content container">
+      <p class="eyebrow">Himalayan Trekking Guide</p>
+      <h1 id="hero-title">Nepal Trekking Starter Guide</h1>
+      <p class="hero-lead">Everything you need to plan your first trek in the Himalayas, from choosing a route to packing your bag.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#trek-grid">Explore Treks</a>
+        <a class="btn btn-secondary" href="#planning">Plan Your Trip</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-bar">
+    <ul class="container stats-list">
+      <li><span class="stat-number">8</span><span class="stat-label">Planning topics</span></li>
+      <li><span class="stat-number">6</span><span class="stat-label">Trek routes compared</span></li>
+      <li><span class="stat-number">4</span><span class="stat-label">Seasons explained</span></li>
+      <li><span class="stat-number">3</span><span class="stat-label">Interactive tools</span></li>
+    </ul>
+  </div>
+
   <main id="main-content">
-    <section class="intro" id="intro">
-      <p>
-        Nepal offers some of the world's most rewarding treks, but permits, seasons, and costs can be confusing.
-        This guide covers the essentials in one place so you can plan with confidence.
-      </p>
+    <section class="intro container" id="intro">
+      <div class="intro-text">
+        <p class="eyebrow">Start here</p>
+        <h2 class="section-title section-title-left">Trek Nepal with confidence</h2>
+        <p>Nepal offers some of the world's most rewarding treks, but permits, seasons, and costs can be confusing.</p>
+        <p>This guide covers the essentials in one place so you can plan with confidence, whether you are walking to Poon Hill for the first time or preparing for Everest Base Camp.</p>
+      </div>
+      <figure class="intro-figure">
+        <img src="https://images.unsplash.com/photo-1617380613434-7495e9b45dfb?w=1200&q=80&auto=format&fit=crop" alt="Machapuchare peak rising above a mountain camp in the Himalayas of Nepal" loading="lazy">
+        <figcaption>Machapuchare above a mountain camp, Nepal</figcaption>
+      </figure>
     </section>
 
-    <h2 class="section-title">Trekking Topics</h2>
+    <section class="topics container" id="topics">
+      <h2 class="section-title">Trekking Topics</h2>
+      <p class="section-subtitle">Select a topic to read the full guide.</p>
 
-    <section class="trek-grid" id="trek-grid" aria-label="Trekking topics">
-      <article class="trek-card">
-        <h3>Choosing a Trek</h3>
-        <p class="card-summary">Find the right route for your fitness, time, and interests.</p>
-        <div class="card-details">
-          <p>New trekkers should start with Ghorepani Poon Hill (4 to 6 days) or Annapurna Base Camp (10 to 12 days). Both have well-marked trails and plenty of teahouses.</p>
-          <p>Experienced hikers looking for a challenge can choose Everest Base Camp or the Gokyo Lakes. Use the route list in Plan Your Trek to compare seasons.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+      <div class="trek-grid" id="trek-grid" aria-label="Trekking topics">
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1776755497429-842cdc93c355?w=800&q=80&auto=format&fit=crop" alt="Snow-capped mountains reflected in a clear lake with prayer flags" loading="lazy">
+          <div class="card-body">
+            <h3>Choosing a Trek</h3>
+            <p class="card-summary">Find the right route for your fitness, time, and interests.</p>
+            <div class="card-details">
+              <p>New trekkers should start with Ghorepani Poon Hill (4 to 6 days) or Annapurna Base Camp (10 to 12 days). Both have well-marked trails and plenty of teahouses.</p>
+              <p>Experienced hikers looking for a challenge can choose Everest Base Camp or the Gokyo Lakes. Use the route list in Plan Your Trek to compare seasons.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
 
-      <article class="trek-card">
-        <h3>Permits and TIMS Card</h3>
-        <p class="card-summary">Most treks need permits. Arrange them before you set out.</p>
-        <div class="card-details">
-          <p>The TIMS (Trekkers' Information Management System) card is a registration card required on most trekking routes.</p>
-          <p>Annapurna routes need an ACAP permit, Everest routes need a Sagarmatha National Park permit plus a local municipality permit, and Upper Mustang needs a restricted area permit with a registered guide.</p>
-          <p>Fees change, so confirm current prices with official offices in Kathmandu or Pokhara. Carry copies of your passport and permits.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1599751229070-854ae5c90869?w=800&q=80&auto=format&fit=crop" alt="Green and brown mountain slopes under a blue sky" loading="lazy">
+          <div class="card-body">
+            <h3>Permits and TIMS Card</h3>
+            <p class="card-summary">Most treks need permits. Arrange them before you set out.</p>
+            <div class="card-details">
+              <p>The TIMS (Trekkers' Information Management System) card is a registration card required on most trekking routes.</p>
+              <p>Annapurna routes need an ACAP permit, Everest routes need a Sagarmatha National Park permit plus a local municipality permit, and Upper Mustang needs a restricted area permit with a registered guide.</p>
+              <p>Fees change, so confirm current prices with official offices in Kathmandu or Pokhara. Carry copies of your passport and permits.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
 
-      <article class="trek-card">
-        <h3>Guides and Porters</h3>
-        <p class="card-summary">Decide whether you want help on the trail.</p>
-        <div class="card-details">
-          <p>Popular routes like Poon Hill and Annapurna Base Camp are well marked, so a guide is optional. Remote routes like Gokyo or Upper Mustang are safer with one.</p>
-          <p>A porter carries your main bag, usually up to about 20 kg. Hire through a licensed agency, check the guide's credentials, and pay fair wages.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1584395631446-e41b0fc3f68d?w=800&q=80&auto=format&fit=crop" alt="Snow-covered mountain under a blue sky during the day" loading="lazy">
+          <div class="card-body">
+            <h3>Guides and Porters</h3>
+            <p class="card-summary">Decide whether you want help on the trail.</p>
+            <div class="card-details">
+              <p>Popular routes like Poon Hill and Annapurna Base Camp are well marked, so a guide is optional. Remote routes like Gokyo or Upper Mustang are safer with one.</p>
+              <p>A porter carries your main bag, usually up to about 20 kg. Hire through a licensed agency, check the guide's credentials, and pay fair wages.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
 
-      <article class="trek-card">
-        <h3>Best Seasons</h3>
-        <p class="card-summary">Choose a season for clear views and safe trails.</p>
-        <div class="card-details">
-          <p><strong>Autumn (September to November):</strong> the clearest skies and the most popular season. Book teahouses early.</p>
-          <p><strong>Spring (March to May):</strong> warm days, blooming rhododendrons, and good visibility.</p>
-          <p><strong>Winter (December to February):</strong> cold at altitude and snow on high passes, but quieter trails and clear lower-altitude views.</p>
-          <p><strong>Monsoon (June to August):</strong> rain and landslide risk on most routes. Upper Mustang is the exception, since it lies in a rain shadow.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1513023840371-dd774fcaee5b?w=800&q=80&auto=format&fit=crop" alt="Snow-covered mountain peak under a clear blue sky" loading="lazy">
+          <div class="card-body">
+            <h3>Best Seasons</h3>
+            <p class="card-summary">Choose a season for clear views and safe trails.</p>
+            <div class="card-details">
+              <p><strong>Autumn (September to November):</strong> the clearest skies and the most popular season. Book teahouses early.</p>
+              <p><strong>Spring (March to May):</strong> warm days, blooming rhododendrons, and good visibility.</p>
+              <p><strong>Winter (December to February):</strong> cold at altitude and snow on high passes, but quieter trails and clear lower-altitude views.</p>
+              <p><strong>Monsoon (June to August):</strong> rain and landslide risk on most routes. Upper Mustang is the exception, since it lies in a rain shadow.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
 
-      <article class="trek-card">
-        <h3>Altitude Sickness Safety</h3>
-        <p class="card-summary">Acclimatize slowly and learn the warning signs.</p>
-        <div class="card-details">
-          <p>Altitude sickness can affect anyone above about 2,500 m (8,200 ft). The rule is "climb high, sleep low." Avoid raising your sleeping altitude by more than about 500 m per day, and take a rest day every few days.</p>
-          <p>Mild symptoms include headache, nausea, dizziness, and poor sleep. If they get worse, stop climbing and descend. Confusion, breathlessness at rest, or a cough with fluid are emergencies: descend immediately.</p>
-          <p>Check that your travel insurance covers helicopter evacuation, and speak to a doctor before you go about preventive medication.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1592450620607-efefef574bd0?w=800&q=80&auto=format&fit=crop" alt="Snow-covered mountain range under blue skies" loading="lazy">
+          <div class="card-body">
+            <h3>Altitude Sickness Safety</h3>
+            <p class="card-summary">Acclimatize slowly and learn the warning signs.</p>
+            <div class="card-details">
+              <p>Altitude sickness can affect anyone above about 2,500 m (8,200 ft). The rule is "climb high, sleep low." Avoid raising your sleeping altitude by more than about 500 m per day, and take a rest day every few days.</p>
+              <p>Mild symptoms include headache, nausea, dizziness, and poor sleep. If they get worse, stop climbing and descend. Confusion, breathlessness at rest, or a cough with fluid are emergencies: descend immediately.</p>
+              <p>Check that your travel insurance covers helicopter evacuation, and speak to a doctor before you go about preventive medication.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
 
-      <article class="trek-card">
-        <h3>Packing List</h3>
-        <p class="card-summary">Pack light, in layers, and keep everything waterproof.</p>
-        <div class="card-details">
-          <p>Dress in layers: a base layer, fleece, down jacket, and waterproof shell. Add sturdy broken-in boots, a warm hat, gloves, and a headlamp.</p>
-          <p>Use the interactive checklist in Plan Your Trek to tick off each item as you pack.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?w=800&q=80&auto=format&fit=crop" alt="Houses on a hillside overlooking a mountain range" loading="lazy">
+          <div class="card-body">
+            <h3>Packing List</h3>
+            <p class="card-summary">Pack light, in layers, and keep everything waterproof.</p>
+            <div class="card-details">
+              <p>Dress in layers: a base layer, fleece, down jacket, and waterproof shell. Add sturdy broken-in boots, a warm hat, gloves, and a headlamp.</p>
+              <p>Use the interactive checklist in Plan Your Trek to tick off each item as you pack.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
 
-      <article class="trek-card">
-        <h3>Teahouse Lodges</h3>
-        <p class="card-summary">Simple rooms and home-cooked meals along the trail.</p>
-        <div class="card-details">
-          <p>Teahouses offer basic rooms, often with shared bathrooms. Rooms are usually inexpensive or free when you eat your meals there.</p>
-          <p>Hot showers, device charging, and Wi-Fi usually cost extra. Meals typically cost a few hundred rupees each, and the menu is limited, so order early.</p>
-          <p>ATMs are scarce on the trail, so bring enough cash. Pack earplugs and a water filter or purification tablets.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1788004263255-9fc137e0cc41?w=800&q=80&auto=format&fit=crop" alt="Snow-capped mountain peaks under a clear blue sky with wispy clouds" loading="lazy">
+          <div class="card-body">
+            <h3>Teahouse Lodges</h3>
+            <p class="card-summary">Simple rooms and home-cooked meals along the trail.</p>
+            <div class="card-details">
+              <p>Teahouses offer basic rooms, often with shared bathrooms. Rooms are usually inexpensive or free when you eat your meals there.</p>
+              <p>Hot showers, device charging, and Wi-Fi usually cost extra. Meals typically cost a few hundred rupees each, and the menu is limited, so order early.</p>
+              <p>ATMs are scarce on the trail, so bring enough cash. Pack earplugs and a water filter or purification tablets.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
 
-      <article class="trek-card">
-        <h3>Budget Planning</h3>
-        <p class="card-summary">Estimate daily costs for food, lodging, permits, and transport.</p>
-        <div class="card-details">
-          <p>As a rough guide, a teahouse trek costs about USD 30 per day on a budget, USD 50 mid-range, and USD 80 or more for a comfortable trip. These figures exclude permits, flights, and guides.</p>
-          <p>Other costs include permits, the flight or bus to the trailhead, a guide or porter if you hire one, and travel insurance. Use the estimator in Plan Your Trek to calculate your trip.</p>
-        </div>
-        <button class="card-btn" aria-expanded="false">Read more</button>
-      </article>
+        <article class="trek-card">
+          <img class="card-image" src="https://images.unsplash.com/photo-1637846959991-18e54d6e2035?w=800&q=80&auto=format&fit=crop" alt="Mountain range covered in snow at sunset" loading="lazy">
+          <div class="card-body">
+            <h3>Budget Planning</h3>
+            <p class="card-summary">Estimate daily costs for food, lodging, permits, and transport.</p>
+            <div class="card-details">
+              <p>As a rough guide, a teahouse trek costs about USD 30 per day on a budget, USD 50 mid-range, and USD 80 or more for a comfortable trip. These figures exclude permits, flights, and guides.</p>
+              <p>Other costs include permits, the flight or bus to the trailhead, a guide or porter if you hire one, and travel insurance. Use the estimator in Plan Your Trek to calculate your trip.</p>
+            </div>
+            <button class="card-btn" aria-expanded="false">Read more</button>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="planning-tools" id="planning">
-      <h2>Plan Your Trek</h2>
+    <section class="planning-tools container" id="planning">
+      <h2 class="section-title">Plan Your Trek</h2>
+      <p class="section-subtitle">Three quick tools to shape your trip.</p>
 
-      <div class="tool" id="route-tool">
-        <h3>Trek Routes by Season</h3>
-        <label for="season">Choose a trekking season</label>
-        <select id="season" class="season-picker">
-          <option value="all">All seasons</option>
-          <option value="spring">Spring (March to May)</option>
-          <option value="autumn">Autumn (September to November)</option>
-          <option value="winter">Winter (December to February)</option>
-          <option value="monsoon">Monsoon (June to August)</option>
-        </select>
-        <ul class="route-list" id="route-list">
-          <li class="route-item" data-seasons="spring autumn winter">Ghorepani Poon Hill: 4 to 6 days, easy</li>
-          <li class="route-item" data-seasons="spring autumn">Annapurna Base Camp: 10 to 12 days, moderate</li>
-          <li class="route-item" data-seasons="spring autumn winter">Langtang Valley: 7 to 10 days, moderate</li>
-          <li class="route-item" data-seasons="spring autumn">Everest Base Camp: 12 to 14 days, challenging</li>
-          <li class="route-item" data-seasons="spring autumn">Gokyo Lakes: 12 to 15 days, challenging</li>
-          <li class="route-item" data-seasons="spring autumn monsoon">Upper Mustang: 10 to 14 days, moderate, restricted area permit</li>
-        </ul>
-      </div>
+      <div class="tools-grid">
+        <div class="tool" id="route-tool">
+          <h3>Trek Routes by Season</h3>
+          <label for="season">Choose a trekking season</label>
+          <select id="season" class="season-picker">
+            <option value="all">All seasons</option>
+            <option value="spring">Spring (March to May)</option>
+            <option value="autumn">Autumn (September to November)</option>
+            <option value="winter">Winter (December to February)</option>
+            <option value="monsoon">Monsoon (June to August)</option>
+          </select>
+          <ul class="route-list" id="route-list">
+            <li class="route-item" data-seasons="spring autumn winter">Ghorepani Poon Hill: 4 to 6 days, easy</li>
+            <li class="route-item" data-seasons="spring autumn">Annapurna Base Camp: 10 to 12 days, moderate</li>
+            <li class="route-item" data-seasons="spring autumn winter">Langtang Valley: 7 to 10 days, moderate</li>
+            <li class="route-item" data-seasons="spring autumn">Everest Base Camp: 12 to 14 days, challenging</li>
+            <li class="route-item" data-seasons="spring autumn">Gokyo Lakes: 12 to 15 days, challenging</li>
+            <li class="route-item" data-seasons="spring autumn monsoon">Upper Mustang: 10 to 14 days, moderate, restricted area permit</li>
+          </ul>
+        </div>
 
-      <div class="tool" id="pack-tool">
-        <h3>Packing Checklist</h3>
-        <ul class="pack-list" id="pack-list">
-          <li><label><input type="checkbox"> Waterproof jacket</label></li>
-          <li><label><input type="checkbox"> Down jacket</label></li>
-          <li><label><input type="checkbox"> Fleece or mid-layer</label></li>
-          <li><label><input type="checkbox"> Trekking boots (broken in)</label></li>
-          <li><label><input type="checkbox"> Warm hat and gloves</label></li>
-          <li><label><input type="checkbox"> Headlamp and spare batteries</label></li>
-          <li><label><input type="checkbox"> Sleeping bag (rated for the season)</label></li>
-          <li><label><input type="checkbox"> Water filter or purification tablets</label></li>
-          <li><label><input type="checkbox"> Passport copies, permits, and TIMS card</label></li>
-          <li><label><input type="checkbox"> Cash in rupees and dollars</label></li>
-        </ul>
-        <p class="pack-count" id="pack-count">0 of 10 packed</p>
-      </div>
+        <div class="tool" id="pack-tool">
+          <h3>Packing Checklist</h3>
+          <ul class="pack-list" id="pack-list">
+            <li><label><input type="checkbox"> Waterproof jacket</label></li>
+            <li><label><input type="checkbox"> Down jacket</label></li>
+            <li><label><input type="checkbox"> Fleece or mid-layer</label></li>
+            <li><label><input type="checkbox"> Trekking boots (broken in)</label></li>
+            <li><label><input type="checkbox"> Warm hat and gloves</label></li>
+            <li><label><input type="checkbox"> Headlamp and spare batteries</label></li>
+            <li><label><input type="checkbox"> Sleeping bag (rated for the season)</label></li>
+            <li><label><input type="checkbox"> Water filter or purification tablets</label></li>
+            <li><label><input type="checkbox"> Passport copies, permits, and TIMS card</label></li>
+            <li><label><input type="checkbox"> Cash in rupees and dollars</label></li>
+          </ul>
+          <p class="pack-count" id="pack-count">0 of 10 packed</p>
+        </div>
 
-      <div class="tool" id="budget-tool">
-        <h3>Trip Budget Estimator</h3>
-        <label for="trek-days">Number of trekking days</label>
-        <input id="trek-days" type="number" class="trek-days" min="1" value="10">
-        <label for="comfort-level">Comfort level</label>
-        <select id="comfort-level" class="comfort-level">
-          <option value="budget">Budget</option>
-          <option value="mid" selected>Mid-range</option>
-          <option value="comfortable">Comfortable</option>
-        </select>
-        <p class="budget-total" id="budget-total"></p>
-        <p class="note">Estimates are approximate and exclude permits, flights, and guides.</p>
+        <div class="tool" id="budget-tool">
+          <h3>Trip Budget Estimator</h3>
+          <label for="trek-days">Number of trekking days</label>
+          <input id="trek-days" type="number" class="trek-days" min="1" value="10">
+          <label for="comfort-level">Comfort level</label>
+          <select id="comfort-level" class="comfort-level">
+            <option value="budget">Budget</option>
+            <option value="mid" selected>Mid-range</option>
+            <option value="comfortable">Comfortable</option>
+          </select>
+          <p class="budget-total" id="budget-total"></p>
+          <p class="note">Estimates are approximate and exclude permits, flights, and guides.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer id="site-footer">
-    <p>Before you go: check current permit fees, weather, and travel advisories.</p>
-    <p>Photo credits: to be added before publishing.</p>
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top" aria-label="Nepal Trekking Guide, back to top">
+          <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <path d="M2 40 L17 14 L25 27 L31 18 L46 40 Z" fill="#F2A541"/>
+            <path d="M17 14 L21 21 L18 20 L15 22 Z" fill="#F2F5F7"/>
+            <path d="M31 18 L34 23 L31 22 L29 23 Z" fill="#F2F5F7"/>
+          </svg>
+          <span class="logo-text">Nepal<span class="logo-accent">Trek</span> Guide</span>
+        </a>
+        <p>A practical starter guide for planning a safe, well-prepared trek in the Nepal Himalaya.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <h2 class="footer-heading">Explore</h2>
+        <ul>
+          <li><a href="#trek-grid">Trekking Topics</a></li>
+          <li><a href="#planning">Plan Your Trek</a></li>
+          <li><a href="#top">Back to Top</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links" aria-label="Official resources">
+        <h2 class="footer-heading">Official Resources</h2>
+        <ul>
+          <li><a href="https://welcomenepal.com" target="_blank" rel="noopener noreferrer">Nepal Tourism Board</a></li>
+          <li><a href="https://www.dnpwc.gov.np" target="_blank" rel="noopener noreferrer">Dept. of National Parks</a></li>
+          <li><a href="https://ntnc.org.np" target="_blank" rel="noopener noreferrer">National Trust for Nature Conservation</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-note">
+        <h2 class="footer-heading">Before You Go</h2>
+        <p>Check current permit fees, weather, and travel advisories before you leave.</p>
+        <p>Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="container">&copy; 2026 Nepal Trekking Starter Guide. Information is approximate and should be verified before travel.</p>
+    </div>
   </footer>
 
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">Back to top</button>
